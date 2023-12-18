@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".home.FragmentHome">
+
+        <TextView
+            android:id="@+id/tv_fix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Sửa"
+            android:textColor="#FFCA28"
+            android:textSize="25sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_tittle_doccument"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Thư mục"
+            android:textSize="45dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_fix" />
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/im_search"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            app:iconifiedByDefault="false"
+            app:layout_constraintLeft_toLeftOf="@id/tv_tittle_doccument"
+            app:layout_constraintRight_toRightOf="@id/tv_fix"
+            app:layout_constraintTop_toBottomOf="@id/tv_tittle_doccument"
+            app:queryHint="Tìm kiếm"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_tittle_icloud"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:text="Icloud"
+            android:textSize="30dp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_tittle_doccument"
+            app:layout_constraintTop_toBottomOf="@id/tv_fix" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_recyclerview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/tv_tittle_icloud"
+            app:layout_constraintRight_toRightOf="@id/tv_fix"
+            app:layout_constraintTop_toBottomOf="@id/tv_tittle_icloud"
+
+            />
+
+        <ImageView
+            android:id="@+id/im_icon_folder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:src="@drawable/folder"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/tv_tittle_icloud" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sheet"
+            android:id="@+id/im_sheet"
+            app:layout_constraintBottom_toBottomOf="@id/im_icon_folder"
+            app:layout_constraintRight_toRightOf="@id/tv_fix"
+            app:layout_constraintTop_toTopOf="@id/im_icon_folder" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
